@@ -1,39 +1,21 @@
-// Uma livraria esta fazendo uma promoção para os livros de Harry Potter:
-// de R$22 por R$15, isso se levar os 7 livros (ou mais).
-// Faça um programa para ajudar o vendedor a inforar o preço total com base no
-// número de livros adquiridos
+// como salvar cookies com data de validade
+// document.cookie = "username=Rafael; expires:Thu, 14 Dec 2029 12:99 UTC"
 
- function pegarDados(){
-     let quantidade = prompt("Quantidade de livros");
-     console.log(typeof quantidade)
-     return quantidade;
- }
+// localStorage.setItem("Nome","Rafael")
+let nome = ["A","B","C"]
+let nomeJson = JSON.stringify(nome)
+localStorage.setItem("nome",nomeJson)
 
- function calcularPreço(quantidade){
-    let valor; 
-    if (quantidade >=7){
-        valor = quantidade * 15;
-     } else {
-        valor = quantidade * 22;
-     }
-     return valor
- }
+console.log(localStorage.getItem("nome"))
 
- function main(){
-     let quantidade = pegarDados();
-     let retorno = calcularPreço(quantidade);
-     console.log(retorno)
- }
- main()
+// apaga todo o local storage
+// localStorage.clear
 
-// const prompt = require('prompt-sync')()
+// apaga um item do local storage
+// localStorage.removeItem("nome")
 
-// const getUserInfo = () => {
-// }
-// const calcularPreço = nlivros =>{
-//     if(nlivros >=7)
-// }
-// const ma{
-//     let books = getUserInfo()
-//     let preçofinal = calcularPreço()
-// }
+// converter para JSON
+// JSON.stringify(x)
+
+// converter de JSON
+// JSON.parse(a)
